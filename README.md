@@ -12,4 +12,12 @@ c. Calculate Flow Direction
 
 ![Flow Direction](https://github.com/user-attachments/assets/e192b0d1-53e6-4c0b-bc29-1aef5ad46f9b)
 
-d. 
+d. Compute Flow Accumulation
+
+![Flow Accumulation](https://github.com/user-attachments/assets/b82b3a4c-283a-46cf-ba5c-eb6178ffe9df)
+
+e. Determine Slope
+
+![Slope (Degrees)](https://github.com/user-attachments/assets/7ad2793c-016d-41cc-ba58-1a9847eda5b2)
+
+f. 
