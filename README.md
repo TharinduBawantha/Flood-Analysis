@@ -20,4 +20,26 @@ e. Determine Slope
 
 ![Slope (Degrees)](https://github.com/user-attachments/assets/7ad2793c-016d-41cc-ba58-1a9847eda5b2)
 
-f. 
+f. Convert Slope to Radians
+
+
+![Slope (Radians)](https://github.com/user-attachments/assets/14a71e50-bf46-41f2-a523-2a5ca8a8519e)
+
+g. Calculate the Tangent of the Slope
+
+![Tangent of Slope](https://github.com/user-attachments/assets/8286e2a1-efa1-4023-bf3b-446455ed02cc)
+
+h. Adjust Flow Accumulation
+
+![Adjusted Flow Accumulation](https://github.com/user-attachments/assets/64104995-a88d-4ed4-912f-d72aa57685b9)
+
+i. Compute Topographic Wetness Index (TWI)
+
+![TWI](https://github.com/user-attachments/assets/4dc0e0b0-dd6a-4707-9b26-662d62c24498)
+
+j. Clip TWI Raster to Shapefile
+
+![TWI](https://github.com/user-attachments/assets/4c0ea690-6a90-4507-834b-4960ab7af3aa)
+
+
+
