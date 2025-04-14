@@ -1,5 +1,8 @@
 **01. TWI map**
 
+The Topographic Wetness Index (TWI) is a valuable tool in GIS. It measures the influence of topography on hydrological processes and identifies regions that, given their landscape location, are probably wetter. 
+            TWI = ln(adjusted_flow_accumulation / tan_slope)
+
 a. DEM visualisation
 
 ![DEM](https://github.com/user-attachments/assets/1061200f-0376-4ee2-bb9f-de3b8bc5bcac)
