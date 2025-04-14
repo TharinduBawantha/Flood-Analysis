@@ -9,8 +9,75 @@ filled_dem_file <- "filled_dem.tif"
 flow_dir_file <- "flow_dir.tif" 
 flow_accum_file <- "flow_acc.tif"  
 
+1. Dem visuliztion
+
 # Load the DEM
 dem <- rast(dem_file)
 
 # Plot the DEM
 plot(dem, main = "DEM", col = terrain.colors(100))
+
+
+2. Fill the DEM
+
+# Write to disk for WhiteboxTools (must be file-based)
+writeRaster(dem, temp_dem, overwrite = TRUE)
+
+# Run Whitebox Fill Depressions tool
+wbt_fill_depressions(
+  dem = temp_dem,
+  output = filled_dem,
+  verbose = TRUE
+)
+
+# Load the filled DEM back into R
+filled <- rast(filled_dem)
+
+# Plot the filled DEM
+plot(filled, main = "Filled DEM", col = terrain.colors(100))
+
+3. Calculate Flow Direction
+
+# Run WhiteboxTools to calculate flow direction (D8 method)
+wbt_d8_pointer(
+  dem = filled_dem_file,
+  output = flow_dir_file,
+  verbose = TRUE
+)
+
+# Load the flow direction raster
+flow_dir <- rast(flow_dir_file)
+
+# Plot the flow direction result
+plot(flow_dir, main = "Flow Direction (D8)", col = topo.colors(100))
+
+4. Compute Flow Accumulation
+wbt_d8_flow_accumulation(
+  input = flow_dir_file,
+  output = flow_accum_file,
+  out_type = "cells",   # 'cells' counts the number of contributing cells
+  verbose = TRUE
+)
+
+# Load the flow accumulation raster
+flow_accum <- rast(flow_accum_file)
+
+# Plot the flow accumulation result
+plot(flow_accum, main = "Flow Accumulation", col = rev(terrain.colors(100)))
+
+5. Determine Slope
+
+# Calculate slope in degrees using WhiteboxTools
+wbt_slope(
+  dem = filled_dem_file,
+  output = slope_file,
+  zfactor = 1.0,       # Elevation units are already in meters, so z-factor is 1
+  units = "degrees",   # Output in degrees
+  verbose = TRUE
+)
+
+# Load the slope raster
+slope_deg <- rast(slope_file)
+
+# Plot the slope in degrees
+plot(slope_deg, main = "Slope (Degrees)", col = terrain.colors(100))
