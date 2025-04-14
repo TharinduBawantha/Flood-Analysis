@@ -16,6 +16,8 @@ This guarantees that there are no depressions or sinks in the DEM that can imped
 
 c. Calculate Flow Direction
 
+In the context of hydrology and GIS, "flow direction" refers to the path that water takes across a landscape, typically determined by the steepest slope or direction of greatest elevation difference. It's essentially the direction water flows from a point on the land surface under the influence of gravity. This determines the direction of flow for each cell in the DEM.
+
 ![Flow Direction](https://github.com/user-attachments/assets/e192b0d1-53e6-4c0b-bc29-1aef5ad46f9b)
 
 d. Compute Flow Accumulation
