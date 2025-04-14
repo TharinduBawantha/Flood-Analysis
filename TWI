@@ -1,0 +1,16 @@
+# Load libraries
+library(terra)
+library(whitebox)
+
+# Set path to your DEM file (GeoTIFF format)
+dem_file <- "DEM.tif" 
+temp_dem <- "temp_dem.tif" 
+filled_dem_file <- "filled_dem.tif" 
+flow_dir_file <- "flow_dir.tif" 
+flow_accum_file <- "flow_acc.tif"  
+
+# Load the DEM
+dem <- rast(dem_file)
+
+# Plot the DEM
+plot(dem, main = "DEM", col = terrain.colors(100))
