@@ -81,3 +81,85 @@ slope_deg <- rast(slope_file)
 
 # Plot the slope in degrees
 plot(slope_deg, main = "Slope (Degrees)", col = terrain.colors(100))
+
+6. Convert Slope to Radians
+
+# Convert slope from degrees to radians
+slope_rad <- slope_deg * (pi / 180)
+
+# Plot the slope in radians
+plot(slope_rad, main = "Slope (Radians)", col = terrain.colors(100))
+
+7. Calculate the Tangent of the Slope
+
+# Calculate the tangent of the slope in radians
+tan_slope <- tan(slope_rad)
+
+# Plot the tangent of the slope
+plot(tan_slope, main = "Tangent of Slope", col = terrain.colors(100))
+
+8. Adjust Flow Accumulation
+
+# Add 1 to each cell in the flow accumulation raster
+adjusted_flow_accum <- flow_accum + 1
+
+# Plot the adjusted flow accumulation
+plot(adjusted_flow_accum, main = "Adjusted Flow Accumulation", col = rev(terrain.colors(100)))
+
+9. Compute Topographic Wetness Index (TWI)
+
+# Compute the Topographic Wetness Index
+twi <- log(adjusted_flow_accum / tan_slope)
+
+# Plot the TWI
+plot(twi, main = "Topographic Wetness Index (TWI)", col = rev(terrain.colors(100)))
+
+10. Clip TWI Raster to Shapefile
+
+# Load the shapefile for Ratnapura District
+rathnapura <- vect("rathnapura district.shp")
+
+# Reproject shapefile to match TWI raster CRS (if needed)
+rathnapura <- project(rathnapura, twi)
+
+# Load the clipped TWI raster (if not already in session)
+twi_clipped <- rast("twi_rathnapura.tif")
+
+# Load TWI raster
+twi_rathnapura <- rast("twi_rathnapura.tif")
+rathnapura <- project(rathnapura, twi_rathnapura)
+
+# Convert raster to dataframe
+twi_df <- as.data.frame(twi_rathnapura, xy = TRUE)
+colnames(twi_df) <- c("longitude", "latitude", "twi")
+
+# Classify TWI using Jenks breaks
+breaks_twi <- classIntervals(twi_df$twi, n = num_intervals, style = "jenks")$brks
+labels_twi <- paste(round(breaks_twi[-length(breaks_twi)], 2), round(breaks_twi[-1], 2), sep = " - ")
+twi_df$interval <- cut(twi_df$twi, breaks = breaks_twi, labels = labels_twi)
+twi_df <- twi_df[!is.na(twi_df$interval), ]
+
+# Color palette
+twi_colors <- rev(brewer.pal(num_intervals, "RdYlGn"))
+
+
+# Plot TWI
+ggplot() +
+  geom_raster(data = twi_df, aes(x = longitude, y = latitude, fill = interval)) +
+  geom_sf(data = st_as_sf(rathnapura), fill = NA, color = "black", size = 0.5) +
+  scale_fill_manual(values = twi_colors, name = "TWI", labels = labels_twi) +
+  coord_sf(expand = FALSE) +
+  theme_minimal() +
+  labs(title = "Topographic Wetness Index (TWI) – Ratnapura District") +
+  theme(
+    panel.grid.major = element_line(color = "grey", size = 0.4),
+    panel.grid.minor = element_blank(),
+    axis.text.x = element_text(size = 8),
+    axis.text.y = element_text(size = 8),
+    axis.title.x = element_blank(),
+    axis.title.y = element_blank(),
+    legend.position = "right"
+  )
+
+
+
