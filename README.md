@@ -22,6 +22,8 @@ In the context of hydrology and GIS, "flow direction" refers to the path that wa
 
 d. Compute Flow Accumulation
 
+The accumulated flow is based on the number of total or a fraction of cells flowing into each cell in the output raster. The current processing cell is not considered in this accumulation. Output cells with a high flow accumulation are areas of concentrated flow and can be used to identify stream channels. This calculates the number of cells that contribute flow to each cell in the DEM.
+
 ![Flow Accumulation](https://github.com/user-attachments/assets/b82b3a4c-283a-46cf-ba5c-eb6178ffe9df)
 
 e. Determine Slope
