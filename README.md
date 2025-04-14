@@ -28,22 +28,31 @@ The accumulated flow is based on the number of total or a fraction of cells flow
 
 e. Determine Slope
 
+Slope calculate by the maximum rate of change between each cell and its neighbors.
+
 ![Slope (Degrees)](https://github.com/user-attachments/assets/7ad2793c-016d-41cc-ba58-1a9847eda5b2)
 
 f. Convert Slope to Radians
 
+Convert radians due to TWI calculations requiring slope values in radians.
 
 ![Slope (Radians)](https://github.com/user-attachments/assets/14a71e50-bf46-41f2-a523-2a5ca8a8519e)
 
 g. Calculate the Tangent of the Slope
 
+         tan_slope = tan(slope_radians)
+
 ![Tangent of Slope](https://github.com/user-attachments/assets/8286e2a1-efa1-4023-bf3b-446455ed02cc)
 
 h. Adjust Flow Accumulation
 
+         adjusted_flow_accumulation = flow_accumulation + 1
+
 ![Adjusted Flow Accumulation](https://github.com/user-attachments/assets/64104995-a88d-4ed4-912f-d72aa57685b9)
 
 i. Compute Topographic Wetness Index (TWI)
+
+         TWI = ln(adjusted_flow_accumulation / tan_slope)
 
 ![TWI](https://github.com/user-attachments/assets/4dc0e0b0-dd6a-4707-9b26-662d62c24498)
 
