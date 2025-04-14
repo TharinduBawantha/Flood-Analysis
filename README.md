@@ -61,4 +61,12 @@ j. Clip TWI Raster to Shapefile
 ![TWI](https://github.com/user-attachments/assets/4c0ea690-6a90-4507-834b-4960ab7af3aa)
 
 
+<h1> 02. Annual rainfall </h1>
+
+Interpolating the monthly precipitation point data for each year creates a spatially continuous representation of annual rainfall. Common interpolation methods like Inverse Distance Weighting (IDW) are used to transform point data into a smooth rainfall map.
+
+![precipitation](https://github.com/user-attachments/assets/fdc135d5-5060-46fb-abb3-47c8bbf8b7c3)
+
+
+
 
