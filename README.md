@@ -1,5 +1,9 @@
 <h3> 02. SPI - Stream Power Index map </h3>
 
+     SPIi = ln(DAi * tan(Gi)) 
+
+where SPI is the stream power index at gridcell i, DA is the upstream drainage area (flow accumulation at gridcell i multiplied by gridcell area), and G is the slope at a grid cell i in radians.
+
 a. load the DEM file
 
 ![DEM](https://github.com/user-attachments/assets/86a51e2b-2b85-4140-8a25-f697a03d9e22)
@@ -9,6 +13,29 @@ b. Fill the DEM
 This ensure that the DEM doesn’t have any sinks or depressions that could affect the flow of water.
 
 ![filled DEM](https://github.com/user-attachments/assets/ec7ba91c-401a-41dd-b9bc-6adb41f52ebe)
+
+c. Calculate Flow Direction
+
+Shows the direction of flow out of each cell. 
+
+![flow direction](https://github.com/user-attachments/assets/17bd1498-b4b6-494b-9e41-4047bf330811)
+
+d. Compute Flow Accumulation
+
+Flow accumulation calculates the number of cells that contribute flow to each cell in the DEM.
+
+![flow accumulation](https://github.com/user-attachments/assets/6ee5f5eb-b269-4736-a1df-3d14238d1bb6)
+
+e. slope in degrees
+
+![slope in degrees](https://github.com/user-attachments/assets/82a449e8-97d1-4fd3-96cf-2b36a2f30287)
+
+f. generate the SPI from the formula
+
+![SPI](https://github.com/user-attachments/assets/defbd805-bed1-410d-851c-5cc92f12c425)
+
+
+
 
 
 
