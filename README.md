@@ -63,6 +63,16 @@ f. generate the SPI from the formula
 ![TRI](https://github.com/user-attachments/assets/7072ce11-9885-4197-b7bd-b86227b3f411)
 
 
+<h3> 07. Distance from rivers  </h3>
+
+Distcance from river generate from the Euclidean distance function. Calculate Euclidean distance determine the straight-line distance from each raster cell to the nearest feature, such as rivers, roads, or other elements.
+
+![Distance from River Rathnapura](https://github.com/user-attachments/assets/9eca81ed-0daf-4013-9961-b11792f0825a)
+
+
+
+
+
 
 
 
