@@ -1,5 +1,14 @@
 <h3> 02. SPI - Stream Power Index map </h3>
 
+a. load the DEM file
+
+![DEM](https://github.com/user-attachments/assets/86a51e2b-2b85-4140-8a25-f697a03d9e22)
+
+b. Fill the DEM
+
+This ensure that the DEM doesn’t have any sinks or depressions that could affect the flow of water.
+
+![filled DEM](https://github.com/user-attachments/assets/ec7ba91c-401a-41dd-b9bc-6adb41f52ebe)
 
 
 
