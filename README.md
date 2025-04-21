@@ -60,6 +60,7 @@ f. generate the SPI from the formula
 
 <h3> 06. Topographic Roughness Index (TRI)  </h3>
 
+![TRI](https://github.com/user-attachments/assets/7072ce11-9885-4197-b7bd-b86227b3f411)
 
 
 
