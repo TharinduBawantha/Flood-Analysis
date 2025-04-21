@@ -40,8 +40,10 @@ e. slope in degrees
 
 f. generate the SPI from the formula
 
-![SPI](https://github.com/user-attachments/assets/defbd805-bed1-410d-851c-5cc92f12c425)
+![SPI](https://github.com/user-attachments/assets/30fc3dc8-1201-4b7f-bb5d-6b51e9b04d4d)
 
+
+<h3> 02. Elevation </h3>
 
 
 
