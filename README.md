@@ -43,14 +43,22 @@ f. generate the SPI from the formula
 ![SPI](https://github.com/user-attachments/assets/30fc3dc8-1201-4b7f-bb5d-6b51e9b04d4d)
 
 
-<h3> 02. Elevation </h3>
+<h3> 03. Elevation </h3>
+
+![Elevation Rathnapura](https://github.com/user-attachments/assets/0c187e15-d99d-4606-b0ef-67a17b848604)
 
 
+<h3> 04. Slope </h3>
+
+![Slope Rathnapura](https://github.com/user-attachments/assets/26826a26-294c-48a2-87ae-6f426dfd0f67)
 
 
+<h3> 05. Profile curvature </h3>
+
+![curvature](https://github.com/user-attachments/assets/e3f84313-f257-4b9c-90f5-1083738ee558)
 
 
-
+<h3> 06. Topographic Roughness Index (TRI)  </h3>
 
 
 
