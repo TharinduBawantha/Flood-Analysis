@@ -70,16 +70,14 @@ Distcance from river generate from the Euclidean distance function. Calculate Eu
 ![Distance from River Rathnapura](https://github.com/user-attachments/assets/9eca81ed-0daf-4013-9961-b11792f0825a)
 
 
+<h3> 08. Soil Erodibility - K Factor  </h3>
+
+The Williams K-Factor is a measure of soil erodibility, which quantifies the susceptibility of soil particles to detachment and transport by rainfall and runoff. It is influenced by factors such as soil texture, organic matter content, structure, and permeability. The K-Factor is widely used in erosion models to predict soil loss and assess land vulnerability.
+
+![K factor Rathnapura](https://github.com/user-attachments/assets/6c236ceb-cff2-4f5d-b030-01d1977bb4ff)
 
 
-
-
-
-
-
-
-
-<h1> 01. TWI map </h1>
+<h3> 09. TWI   </h3>
 
 The Topographic Wetness Index (TWI) is a valuable tool in GIS. It measures the influence of topography on hydrological processes and identifies regions that, given their landscape location, are probably wetter. 
             
@@ -141,8 +139,41 @@ j. Clip TWI Raster to Shapefile
 
 ![TWI](https://github.com/user-attachments/assets/4c0ea690-6a90-4507-834b-4960ab7af3aa)
 
+<h3> 10. Rainfall erosivity factor (R)  </h3>
+
+![R factor Rathnapura](https://github.com/user-attachments/assets/07192ad5-decd-488a-9c1d-fc3b1d786139)
+
+<h3> 11. Land use and land cover  </h3>
+
+![LULC Rathnapura](https://github.com/user-attachments/assets/38d67fc0-3c4d-4ebe-bbe8-045765c2702d)
+
+<h3> 12. SAVI  </h3>
+
+The Soil Adjusted Vegetation Index (SAVI) is a vegetation index designed to minimize the influence of soil brightness in areas with sparse vegetation cover. It is particularly useful in regions where vegetation is intermixed with exposed soil, as it adjusts the Normalized Difference Vegetation Index (NDVI) by incorporating a soil brightness correction factor.
+
+      SAVI =1.5 (NIR RED)/(NIR +RED+0.5)
+
+![SAVI Rathnapura](https://github.com/user-attachments/assets/c3d2127c-36d1-4771-9f67-7bdd832cbc6e)
 
 
+<h3> 13. NDVI  </h3>
 
+The Normalized Difference Vegetation Index (NDVI) is a widely used metric for assessing vegetation health and density. It measures the difference between near-infrared (NIR) light, which vegetation strongly reflects, and red light, which vegetation absorbs.
 
+      NDVI=(NIR RED)/(NIR+RED)
+
+![NDVI Rathnapura](https://github.com/user-attachments/assets/814e00ea-7618-468b-8b03-4366445b64a7)
+
+<h3> 14. Population density  </h3>
+
+![Population Density Rathnapura](https://github.com/user-attachments/assets/fdc0ce50-f6d3-46d8-8e7e-771d796f711d)
+
+<h3> 15. Build-Up Index  </h3>
+
+The Build-Up Index (BUI) is a remote sensing index used to identify and map urban or built-up areas. It is particularly effective in distinguishing impervious surfaces, such as concrete and asphalt, from natural vegetation.
+
+     BU = NDBI - NDVI
+     NDBI = (SWIR - NIR) /(SWIR + NIR)
+
+![BU index Rathnapura](https://github.com/user-attachments/assets/5665c1b0-5f02-4f8c-9e3f-6f40e505b8d2)
 
